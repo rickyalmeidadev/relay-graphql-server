@@ -1,0 +1,3 @@
+# Relay GraphQL Server
+
+A quite simple implementation of a GraphQL server that applies the necessary specifications for Relay connections. Working in a progress...
