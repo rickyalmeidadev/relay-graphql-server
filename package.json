@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "git-cz": "^4.7.6"
+  }
+}
