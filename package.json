@@ -1,7 +1,11 @@
 {
-  "name": "server",
+  "name": "relay-graphql-server",
+  "author": {
+    "name": "Ricky Almeida",
+    "email": "ricky.almeida.dev@gmail.com"
+  },
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
