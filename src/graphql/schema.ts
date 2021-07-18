@@ -1,23 +1,6 @@
-import {GraphQLNonNull, GraphQLObjectType, GraphQLSchema} from 'graphql'
-import {connectionArgs, connectionFromArray} from 'graphql-relay'
-import PostType from './posts/type'
-import PostLoader from './posts/loader'
+import {GraphQLSchema} from 'graphql'
+import QueryType from './query-type'
 
-const schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'Query',
-    description: 'The root of all fields',
-    fields: () => ({
-      posts: {
-        type: GraphQLNonNull(PostType.connectionType),
-        args: connectionArgs,
-        resolve: async (_, args) => {
-          const posts = await PostLoader.loadAll()
-          return connectionFromArray(posts, args)
-        }
-      }
-    })
-  })
-})
+const schema = new GraphQLSchema({query: QueryType})
 
 export default schema
